@@ -11,19 +11,20 @@
 5> S5_immunotherapy.ipynb: 利用外部治疗队列IMvigor210和GSE78220来验证模型在预测免疫治疗反应的性能。   
 
 结果说明：    
-result:    
-1> 分子分型结果cluster/：    
+result/:    
+1> 分子分型结果 cluster/：    
 a. consensus.pdf: ConsensusClusterPlus共识聚类结果，得到两个亚型;    
 b. tSNE_Cluster_K2.pdf: 聚类可视化结果;     
 c. KM_K2.pdf: 两个亚型生存曲线差异显著，Log-rank p = 0.00026;    
    
-2> 模型性能评估model_eval/：  
-该模型在测试集中KM曲线差异显著(p=0.023<0.05), C-index为0.680，测试集1-year AUC达0.76。    
+2> 模型性能评估 model_eval/：  
+    该模型在测试集中KM曲线差异显著(p=0.023<0.05), C-index为0.680，测试集1-year AUC达0.76。    
 
-3> 预后价值评估prognostic_eval/：  
-通过ESTIMATE, MCPcounter, TIMER, TIDE评分多个维度来分析免疫微环境，并结合pRRophetic进行药物敏感性分析，发现：高风险组呈现免疫细胞浸润丰富，但 TIDE 评分显著更高(p = 0.00047)，对多种化疗/靶向药显著更敏感。  
+3> 预后价值评估 prognostic_eval/：  
+    通过ESTIMATE, MCPcounter, TIMER, TIDE评分多个维度来分析免疫微环境，并结合pRRophetic进行药物敏感性分析，发现：高风险组呈现免疫细胞浸润丰富，但 TIDE 评分显著更高(p = 0.00047)，对多种化疗/靶向药显著更敏感。  
 
-4> 外部队列验证cohort_validation/：  
-基于模型在独立队列 IMvigor210（抗 PD-L1）和 GSE78220（抗 PD-1）验证结果，发现：高风险组并未发现免疫治疗获益。可能有以下原因：  
-a. 
+4> 外部队列验证 cohort_validation/：  
+    基于模型在独立队列 IMvigor210（抗 PD-L1）和 GSE78220（抗 PD-1）验证结果，发现：高风险组并未发现免疫治疗获益。可能有以下原因：
+构建的模型可能是LUAD特有的，即筛选的模型特征并不是肿瘤通用特性。
+
 
