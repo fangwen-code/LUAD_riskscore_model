@@ -2,6 +2,7 @@
 亮点：从内皮衰老切入，结合多组学，筛选出的 8 基因风险评分在训练和验证中对 LUAD 预后有稳定的区分能力。
 
 技术路线:   
+<img width="850" height="633" alt="image" src="https://github.com/user-attachments/assets/f06f8d82-5383-46da-a969-444934cc782c" />
 
 
 脚本说明：  
